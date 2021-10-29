@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff;
+}
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.page__section {
+  min-height: 100vh;
+  background-image: url(../images/page-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  padding: 74px 0 50px;
+}
+.scroll__btn {
+  text-align: center;
+  padding: 13px 0 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
