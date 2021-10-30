@@ -3,4 +3,85 @@
 @import "fonts";
 @import "global";
 
+.header {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 31px;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 17px;
+    @extend %ubuntu-medium;
+  }
+  &__btn {
+    color: #fff;
+    background-color: transparent;
+    padding: 6px 28px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__phone {
+    @extend %ubuntu-bold;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.menu {
+  &__list-item {
+    display: inline-block;
+
+    & + .menu__list-item {
+      padding-left: 20px;
+    }
+  }
+}
+.top__section {
+  background-image: url(../images/top-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+.top {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+  &__title {
+    @extend %sf-semibold;
+    font-size: 96px;
+    line-height: 114px;
+
+    margin-bottom: 25px;
+  }
+  &__text {
+    margin: 25px 0 35px;
+    max-width: 325px;
+  }
+  &__social-item {
+    display: inline-block;
+    margin: 0 25px;
+  }
+  &__social-link {
+    opacity: 0.5;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 @import "media";

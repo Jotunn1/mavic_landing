@@ -30,6 +30,9 @@ body {
   overflow-x: hidden;
   position: relative;
   color: #fff;
+  @extend %ubuntu-light;
+  font-size: 17px;
+  line-height: 26px;
 }
 .container {
   max-width: 1270px;
@@ -37,17 +40,26 @@ body {
   padding: 0 15px;
 }
 .page__section {
+  box-sizing: border-box;
   min-height: 100vh;
   background-image: url(../images/page-bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   position: relative;
-  padding: 74px 0 50px;
+  padding: 75px 0 50px;
+}
+.title {
+  @extend %sf-regular;
+  font-size: 44px;
+  line-height: 53px;
+  padding-left: 25px;
+  margin-bottom: 55px;
 }
 .scroll__btn {
+  display: block;
   text-align: center;
-  padding: 13px 0 30px;
+  padding: 20px 0 20px;
   position: absolute;
   left: 0;
   right: 0;
