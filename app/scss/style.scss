@@ -123,21 +123,212 @@
     }
   }
   &__slider-box {
-    padding-top: 110px;
+    padding: 110px 0 20px;
     position: relative;
   }
   &__slider-text {
     position: absolute;
     @extend %ubuntu-medium;
-    width: 280px;
+    width: 282px;
     font-size: 24px;
     line-height: 28px;
     text-align: right;
     bottom: 30px;
-    left: -50px;
+    left: -265px;
+    z-index: 5;
   }
   &__slider {
     max-width: 560px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 560px;
+      height: 276px;
+      border: 4px solid #fff;
+      top: -17px;
+      right: -15px;
+    }
+  }
+}
+.slider-btn {
+  padding: 8px 15px;
+  border: none;
+  background-color: rgb(56, 55, 55);
+  cursor: pointer;
+  position: absolute;
+  bottom: -36px;
+  right: 0px;
+  transition: all 0.5s;
+  z-index: 5;
+  &-left {
+    right: 40px;
+  }
+  &:hover {
+    border: 1px solid rgb(126, 126, 126);
+  }
+}
+.benefits {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 25px;
+  }
+  &__item {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    &:nth-child(even) {
+      margin-bottom: 85px;
+    }
+  }
+  &__item-1 {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 245px;
+      height: 45px;
+      background-image: url(../images/1-2.svg);
+      right: -135px;
+      bottom: 79px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+      z-index: 1;
+    }
+  }
+  &__item-2 {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 463px;
+      height: 65px;
+      background-image: url(../images/2-3.svg);
+      left: -459px;
+      bottom: -69px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+      z-index: 1;
+    }
+  }
+  &__item-3 {
+    margin-left: 25px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 254px;
+      height: 40px;
+      background-image: url(../images/3-4.svg);
+      right: -97 px;
+      top: 35px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+      z-index: 1;
+    }
+  }
+  &__num {
+    font-size: 36px;
+    line-height: 41px;
+    @extend %ubuntu-bold;
+    margin-right: 10px;
+  }
+  &__img {
+    position: relative;
+    margin-right: 32px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 193px;
+      height: 128px;
+      border: 2px solid #fff;
+      right: -12px;
+      top: -12px;
+      z-index: -1;
+    }
+  }
+  &__info {
+    width: 300px;
+  }
+  &__info-title {
+    width: 123px;
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+  &__info-text {
+    font-size: 15px;
+    line-height: 19px;
+    @extend %ubuntu-light;
+  }
+}
+.characteristic {
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    width: 280px;
+    position: relative;
+    margin-bottom: 36px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  &__box-2 {
+    margin-top: 140px;
+  }
+  &__box-4 {
+    margin-top: 160px;
+  }
+  &__box-1::before {
+    background-image: url(../images/spec-1.svg);
+    background-repeat: no-repeat;
+    width: 229px;
+    height: 115px;
+    top: 8px;
+    right: -161px;
+  }
+  &__box-2::before {
+    background-image: url(../images/spec-3.svg);
+    background-repeat: no-repeat;
+    width: 346px;
+    height: 81px;
+    top: -70px;
+    right: -310px;
+  }
+  &__box-3::before {
+    background-image: url(../images/spec-2.svg);
+    background-size: cover;
+    width: 274px;
+    height: 134px;
+    top: 17px;
+    left: -287px;
+  }
+  &__box-4::before {
+    background-image: url(../images/spec-4.svg);
+    width: 130px;
+    height: 94px;
+    top: -77px;
+    left: -149px;
+  }
+  &__box-title {
+    font-size: 21px;
+    line-height: 28px;
+    @extend %ubuntu-bold;
+    margin-bottom: 10px;
+  }
+  &__box-text {
+    font-weight: 300;
   }
 }
 
