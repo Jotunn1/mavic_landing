@@ -20,6 +20,7 @@
     "sass": "^1.43.3"
   },
   "dependencies": {
+    "fullpage.js": "^3.1.2",
     "jquery": "^3.6.0"
   }
 }

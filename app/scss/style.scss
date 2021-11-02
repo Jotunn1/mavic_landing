@@ -221,7 +221,7 @@
       width: 254px;
       height: 40px;
       background-image: url(../images/3-4.svg);
-      right: -97 px;
+      right: -97px;
       top: 35px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -271,6 +271,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: 25px;
+  }
+  &__item--img {
+    margin-left: -15px;
+    margin-right: -15px;
   }
 
   &__box {
@@ -329,6 +334,187 @@
   }
   &__box-text {
     font-weight: 300;
+  }
+}
+
+.questions {
+  &__inner {
+    max-width: 757px;
+    padding-bottom: 15px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 319px;
+      height: 128px;
+      bottom: 20px;
+      right: -328px;
+      background-image: url(../images/questions-bg.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__item {
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 690px;
+    margin: 4px;
+  }
+  &__item-title {
+    max-width: 690px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    color: rgba(#fff, 0.8);
+    @extend %ubuntu-medium;
+    padding: 20px 20px 24px 40px;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      content: url("../images/arrow-acordeon.svg");
+      position: absolute;
+      width: 72px;
+      height: 67px;
+      top: 0;
+      right: -72px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__item-text {
+    font-size: 15px;
+    line-height: 22px;
+    @extend %ubuntu-light;
+    padding: 0 30px 40px 60px;
+    margin: 0;
+    display: none;
+  }
+  &__item.questions__item--active {
+    .questions__item-title::after {
+      transform: rotate(180deg);
+      transition: all 1s;
+    }
+    .questions__item-text {
+      display: block;
+    }
+  }
+}
+.contacts {
+  &__inner {
+    display: flex;
+    padding-left: 25px;
+  }
+  &__info {
+    width: 240px;
+    margin-right: 60px;
+  }
+  &__info-box {
+    margin-bottom: 30px;
+  }
+  &__info-title {
+    margin: 0 0 13px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %ubuntu-bold;
+  }
+  &__info-link {
+    font-size: 15px;
+    line-height: 18px;
+    @extend %ubuntu-light;
+    color: rgba($color: #fff, $alpha: 0.7);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__form {
+    margin-right: 105px;
+    width: 570px;
+  }
+  &__form-title {
+    margin: 0 0 13px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %ubuntu-bold;
+  }
+  &__form-text {
+    font-size: 15px;
+    line-height: 18px;
+    @extend %ubuntu-light;
+    margin: 0 0 12px;
+  }
+  &__form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__form-input,
+  &__form-textarea {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    @extend %ubuntu-light;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+    &::placeholder {
+      color: rgba(#fff, 0.5);
+    }
+  }
+  &__form-input {
+    width: 49%;
+  }
+  &__form-textarea {
+    min-height: 144px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  &__form-btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    @extend %ubuntu-bold;
+    letter-spacing: 0.03em;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 9px 15px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__social-item {
+    margin: 28px 0;
+  }
+  &__social-link {
+    opacity: 0.5;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 32px;
+  right: 0;
+  left: 0;
+  &__copy {
+    text-align: right;
+    font-size: 13px;
+    line-height: 15px;
+    color: rgba(#fff, 0.65);
   }
 }
 
