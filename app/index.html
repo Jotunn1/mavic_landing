@@ -19,19 +19,28 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a class="logo" href="#">
-                    <picture class="logo-img">
+                <a class="logo" href="#top__section">
+                    <picture class="logo-img " href="#top__section">
                         <source srcset="images/logo-mobile.png" media="(max-width:600px)" />
                         <img src="images/logo.png" alt="mavic-logo">
                     </picture>
                 </a>
                 <nav class="menu">
+                    <button class="menu__btn">
+                        <span class="menu__btn-line"></span>
+                    </button>
+
                     <ul class="menu__list">
-                        <li class="menu__list-item" href="#"><a class="menu__list-link" href="">О ДРОНЕ</a></li>
-                        <li class="menu__list-item" href="#"><a class="menu__list-link" href="">ПРЕИМУЩЕСТВА</a></li>
-                        <li class="menu__list-item" href="#"><a class="menu__list-link" href="">ХАРАКТЕРИСТИКИ</a></li>
-                        <li class="menu__list-item" href="#"><a class="menu__list-link" href="">ВОПРОСЫ</a></li>
-                        <li class="menu__list-item" href="#"><a class="menu__list-link" href="">КОНТАКТЫ</a></li>
+                        <li class="menu__list-item"><a class="menu__list-link" href="#products">О
+                                ДРОНЕ</a>
+                        </li>
+                        <li class="menu__list-item"><a class="menu__list-link" href="#benefits">ПРЕИМУЩЕСТВА</a></li>
+                        <li class="menu__list-item"><a class="menu__list-link" href="#characteristic">ХАРАКТЕРИСТИКИ</a>
+                        </li>
+                        <li class="menu__list-item"><a class="menu__list-link" href="#questions">ВОПРОСЫ</a></li>
+                        <li class="menu__list-item"><a class="menu__list-link" href="#contacts">КОНТАКТЫ</a></li>
+                        <li class="menu__list-phone"><a class="menu-phone-link" href="tel:80505676767">8 (050) 567 67
+                                67</a></li>
                     </ul>
                 </nav>
                 <div class="header__info">
@@ -42,7 +51,7 @@
         </div>
     </header>
     <main id="fullpage">
-        <section class="page__section top__section">
+        <section id="top__section" class="page__section top__section">
             <div class="top__wrapper page__section-wrapper">
                 <div class="container">
                     <div class="top__inner">
@@ -96,7 +105,7 @@
                                 воздуха с разрешением
                                 в 20 мегапикселей и потрясающими цветами.</p>
                         </div>
-                        <div class="products__slider-box ">
+                        <div class="products__slider-box">
                             <p class="products__slider-text">Лучшая беспилотная
                                 технология аэросъемки</p>
                             <div class="products__slider">
@@ -198,7 +207,7 @@
         <section class="page__section characteristic" id="characteristic">
             <div class="page__section-wrapper">
                 <div class="container">
-                    <h3 class="title characteristic__title">Характеристики</h3>
+                    <h3 class="title `">Характеристики</h3>
                     <div class="characteristic__inner">
                         <div class="characteristic__item">
                             <div class="characteristic__box characteristic__box-1">
@@ -297,7 +306,7 @@
         <section class="page__section contacts" id="contacts">
             <div class="page__section-wrapper">
                 <div class="container">
-                    <h3 class="title">Контакты</h3>
+                    <h3 class="title contacts__title">Контакты</h3>
                     <div class="contacts__inner">
                         <div class="contacts__info">
                             <div class="contacts__info-box">
@@ -364,7 +373,7 @@
         </section>
     </main>
 
-    <!-- <script src="js/libs.min.js"></script> -->
+    <script src="js/scrolloverflow.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/fullpage.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
